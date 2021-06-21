@@ -1,13 +1,13 @@
 export default {
-  title: 'Pig',
-  logo: 'Pig',
-  key: 'pig',   //配置主键,目前用于存储
-  indexTitle: 'pig 快速开发框架',
+  title: 'Donsend',
+  logo: 'Donsend',
+  key: 'Donsend',   //配置主键,目前用于存储
+  indexTitle: '5g消息认证平台',
   whiteList: ['/login', '/404', '/401', '/lock'], // 配置无权限可以访问的页面
   whiteTagList: ['/login', '/404', '/401', '/lock' ], // 配置不添加tags页面 （'/advanced-router/mutative-detail/*'——*为通配符）
   lockPage: '/lock',
   tokenTime: 6000,
-  infoTitle: 'pig 快速开发框架',
+  infoTitle: '5g消息认证平台',
   statusWhiteList: [428],
   // 配置首页不可关闭
   isFirstPage: false,

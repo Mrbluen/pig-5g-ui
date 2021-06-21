@@ -65,7 +65,7 @@ export default {
   &_subtitle {
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: bold;
     color: #fff;
   }
