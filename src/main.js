@@ -4,6 +4,7 @@ import Vue from 'vue'
 import axios from './router/axios'
 import VueAxios from 'vue-axios'
 import App from './App'
+import moment from 'moment' 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Avue from '@smallwei/avue'
@@ -58,9 +59,8 @@ iconfontVersion.forEach(ele => {
   console.log(iconfontUrl.replace('$key', ele))
   loadStyle(iconfontUrl.replace('$key', ele))
 })
-
+Vue.prototype.$moment = moment;
 Vue.config.productionTip = false
-
 new Vue({
   router,
   store,
