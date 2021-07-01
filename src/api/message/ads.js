@@ -2,7 +2,7 @@ import request from '@/router/axios'
 //条件查询分页
 export function findByCondition(obj) {
   return request({
-    url: '/msg/ads/findByCondition',
+    url: '/messages/ads/findByCondition',
     method: 'post',
     data: obj
   })
@@ -20,7 +20,7 @@ export function deleteFile(query) {
 //保存
 export function save(obj) {
   return request({
-    url: '/msg/ads/save',
+    url: '/messages/ads/save',
     method: 'post',
     data: obj
   })
@@ -29,7 +29,7 @@ export function save(obj) {
 //详情
 export function findById(id) {
   return request({
-    url: `/msg/ads/findById/${id}`,
+    url: `/messages/ads/findById/${id}`,
     method: 'get'
   })
 }

@@ -100,6 +100,7 @@
   import {fetchTree} from "@/api/admin/dept";
   import {tableOption} from '@/const/crud/admin/user';
   import {mapGetters} from "vuex";
+  import * as CryptoJS from'crypto-js'
 
   export default {
     name: "table_user",
@@ -200,6 +201,16 @@
         this.form.password = undefined
       },
       create(row, done, loading) {
+        let key = CryptoJS.enc.Latin1.parse(process.env.VUE_APP_PASSWORDKEY)
+        // 加密
+        var encrypted = CryptoJS.AES.encrypt(
+          this.form.password,
+          key, {
+            iv: key,
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.ZeroPadding
+          })
+        this.form.lockPass = encrypted.toString()
         addObj(this.form).then(() => {
           this.getList(this.page);
           done();
@@ -209,6 +220,18 @@
         });
       },
       update(row, index, done, loading) {
+        if(this.form.password != null && this.form.password != ""){
+          let key = CryptoJS.enc.Latin1.parse(process.env.VUE_APP_PASSWORDKEY)
+          // 加密
+          var encrypted = CryptoJS.AES.encrypt(
+            this.form.password,
+            key, {
+              iv: key,
+              mode: CryptoJS.mode.CBC,
+              padding: CryptoJS.pad.ZeroPadding
+            })
+          this.form.lockPass = encrypted.toString()
+        }
         putObj(this.form).then(() => {
           this.getList(this.page);
           done();

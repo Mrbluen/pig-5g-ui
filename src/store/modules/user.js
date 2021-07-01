@@ -51,7 +51,7 @@ const user = {
     LoginByUsername({commit}, userInfo) {
       const user = encryption({
         data: userInfo,
-        key: 'thanks,pig4cloud',
+        key: process.env.VUE_APP_PASSWORDKEY,
         param: ['password']
       })
       return new Promise((resolve, reject) => {

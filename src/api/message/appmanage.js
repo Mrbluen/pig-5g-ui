@@ -2,7 +2,7 @@ import request from '@/router/axios'
 //条件查询分页
 export function findByCondition(obj) {
   return request({
-    url: '/msg/appManage/findByCondition',
+    url: '/messages/appManage/findByCondition',
     method: 'post',
     data: obj
   })
@@ -10,14 +10,14 @@ export function findByCondition(obj) {
 //根据id删除
 export function deleteById (id) {
   return request({
-    url: '/msg/appManage/deleteById/' + id,
+    url: '/messages/appManage/deleteById/' + id,
     method: 'get'
   })
 }
 //保存
 export function save(obj) {
   return request({
-    url: '/msg/appManage/save',
+    url: '/messages/appManage/save',
     method: 'post',
     data: obj
   })
@@ -26,7 +26,7 @@ export function save(obj) {
 //根据id查询详情
 export function findById (id) {
   return request({
-    url: '/msg/appManage/findById/' + id,
+    url: '/messages/appManage/findById/' + id,
     method: 'get'
   })
 }
@@ -34,7 +34,7 @@ export function findById (id) {
 //修改
 export function updateById(obj) {
   return request({
-    url: '/msg/appManage/updateById',
+    url: '/messages/appManage/updateById',
     method: 'post',
     data: obj
   })
