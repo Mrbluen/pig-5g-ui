@@ -3,7 +3,7 @@
     <div class="login-weaper  animated bounceInDown">
       <div class="login-left">
         <img class="img"
-             src="/img/logo.png"
+             src="../../../public/img/logo.png"
              alt="">
         <p class="title">{{website.infoTitle}}</p>
         <p>©2021 v3.2.1</p>

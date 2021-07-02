@@ -8,6 +8,7 @@ const url = 'http://pig-gateway:9999'
 let publicPath = './'
 module.exports = {
   publicPath: publicPath,
+  outputDir: 'donsend',
   lintOnSave: true,
   productionSourceMap: false,
   css: {
