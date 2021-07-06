@@ -33,7 +33,7 @@ var validateClient = (rule, value, callback) => {
       return callback()
     }
     const result = response.data.data
-    if (result.length !== 0) {
+    if (result != null &&  result.length !== 0) {
       callback(new Error('客户端已存在'))
     } else {
       callback()
