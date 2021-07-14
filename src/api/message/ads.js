@@ -37,7 +37,7 @@ export function findById(id) {
 //修改
 export function updateById(obj) {
   return request({
-    url: '/msg/ads/updateById',
+    url: '/messages/ads/updateById',
     method: 'post',
     data: obj
   })
@@ -45,7 +45,7 @@ export function updateById(obj) {
 //删除
 export function deleteById(id) {
   return request({
-    url: `/msg/ads/deleteById/${id}`,
+    url: `/messages/ads/deleteById/${id}`,
     method: 'get'
   })
 }
