@@ -39,3 +39,11 @@ export function updateById(obj) {
     data: obj
   })
 }
+//根据条件统计
+export function countByCondition(obj) {
+  return request({
+    url: '/messages/appManage/countByCondition',
+    method: 'post',
+    data: obj
+  })
+}
