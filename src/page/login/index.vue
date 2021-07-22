@@ -2,11 +2,9 @@
   <div class="login-container">
     <div class="login-weaper  animated bounceInDown">
       <div class="login-left">
-        <img class="img"
-             src="../../../public/img/logo.png"
-             alt="">
+        <p class="title">donsend</p>
         <p class="title">{{website.infoTitle}}</p>
-        <p>©2021 v3.2.1</p>
+        <p>©2021 v1.0</p>
       </div>
       <div class="login-border">
         <div class="login-main">
