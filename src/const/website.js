@@ -7,7 +7,7 @@ export default {
   whiteTagList: ['/login', '/404', '/401', '/lock' ], // 配置不添加tags页面 （'/advanced-router/mutative-detail/*'——*为通配符）
   lockPage: '/lock',
   tokenTime: 6000,
-  infoTitle: '5g消息认证平台',
+  infoTitle: '5G消息认证平台',
   statusWhiteList: [428],
   // 配置首页不可关闭
   isFirstPage: false,
