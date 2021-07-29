@@ -72,6 +72,16 @@ export const tableOption = {
       message: '请输入clientSecret',
       trigger: 'blur'
     }]
+  },{
+    label: '头部basic',
+    prop: 'clientBasic',
+    align: 'center',
+    sortable: true,
+    overHidden: true,
+    addDisplay:false,
+    editDetail:true,
+    editDisabled:true,
+    width: 200
   }, {
     label: '域',
     prop: 'scope',
