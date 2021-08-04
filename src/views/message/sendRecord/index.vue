@@ -43,7 +43,7 @@
               </el-date-picker>
             </el-form-item>
           </el-col>
-          <el-col :span="12">
+          <el-col :span="12" style="padding-left: 45px;">
             <el-button
               type="primary"
               icon="el-icon-search"
