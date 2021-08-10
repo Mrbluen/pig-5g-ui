@@ -52,6 +52,37 @@
           </el-form-item>
         </el-col>
       </el-row>
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <el-form-item label="发送模板id:" prop="sendTemplateId">
+            <el-input v-model="saveForm.sendTemplateId" :disabled="!showAction"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="12">
+          <el-form-item label="回复类型:" prop="replyType">
+            <el-select v-model="saveForm.replyType" placeholder="请选择" :disabled="!showAction">
+              <el-option
+                v-for="item in replyTextArray"
+                :key="item.value"
+                :label="item.name"
+                :value="item.value">
+              </el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <el-form-item label="回复模板id:" prop="replyTemplateId">
+            <el-input v-model="saveForm.replyTemplateId" :disabled="!showAction"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="12">
+          <el-form-item label="回复文本:" prop="replayText">
+            <el-input  type="textarea" v-model="saveForm.replayText" :disabled="!showAction"></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
       <el-divider content-position="left">返回接口设置</el-divider>
       <el-row :gutter="20">
         <el-col :span="12">
@@ -115,6 +146,16 @@ export default {
           resPara: "待定",
         },
       },
+      replyTextArray:[
+        {
+          name:"文本",
+          value:"text"
+        },
+        {
+          name:"模板",
+          value:"template"
+        }
+      ],
       rules: {
         appName: [
           { required: true, message: "请输入系统名称", trigger: "blur" },
@@ -127,6 +168,12 @@ export default {
         ],
         appEndtime: [
           { required: true, message: "请选择生效结束时间", trigger: "blur" },
+        ],
+        sendTemplateId: [
+          { required: true, message: "请输入发送模板id", trigger: "blur" },
+        ],
+        replyType: [
+          { required: true, message: "请选择回复类型", trigger: "blur" },
         ],
         "resInterface.resUri": [
           { required: true, message: "请输入返回接口地址", trigger: "blur" },
