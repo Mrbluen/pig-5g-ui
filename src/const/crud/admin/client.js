@@ -55,6 +55,7 @@ export const tableOption = {
     prop: 'clientId',
     align: 'center',
     sortable: true,
+    editDisabled:true,
     rules: [{
       required: true,
       message: '请输入clientId',
